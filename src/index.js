@@ -17,36 +17,8 @@ import InviteForm from './components/InviteForm';
 import Dashboard from './components/Dashboard';
 import Registration from './components/Registration';
 import UserStatus from './components/UserStatus';
+import NoProcessingCard from './components/NoProcessingCard';
 
-
-
-// Your web app's Firebase configuration
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBWNBHz4HTXBwBmOTvvt2mWyj9f7fv3Hkk",
-//   authDomain: "q-management-f1063.firebaseapp.com",
-//   databaseURL: "https://q-management-f1063.firebaseio.com",
-//   projectId: "q-management-f1063",
-//   storageBucket: "q-management-f1063.appspot.com",
-//   messagingSenderId: "1079241981357",
-//   appId: "1:1079241981357:web:eefe168094e3f379963524",
-//   measurementId: "G-NRFGGE2S14"
-// };
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-// firebase.analytics();
-// const database = firebase.database();
-
-const dbValue = database.ref('test').once('value').then((s) => console.log(s.val()));
-
-
-
-
-
-
-console.log('My Vaule' + dbValue);
-// function getDBValue() {
-//   database.ref().once('field')
-// }
 
 ReactDOM.render(
   <React.StrictMode>
@@ -56,7 +28,8 @@ ReactDOM.render(
         <Route exact path="/dashboard/:id" component={Dashboard} />
         <Route exact path="/registration/:id" component={Registration} />
         <Route exact path="/form/:id/:name" component={InviteForm} />
-        <Route exact path="/status" component={UserStatus} />
+        <Route exact path="/status/:id/:userkey" component={UserStatus} />
+        <Route exact path="/" component={NoProcessingCard} />
       </Switch>
     </Router>
   </React.StrictMode>,

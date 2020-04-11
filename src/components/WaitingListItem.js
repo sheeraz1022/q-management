@@ -31,7 +31,7 @@ export default function WaitingListItem(props) {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
                 <Typography>
-                    {moment(props.user.time).format("DD-MM-YYYY h:mm:ss")}
+                    {props.user.phoneNum}
                 </Typography>
             </ExpansionPanelDetails>
         </ExpansionPanel>);
