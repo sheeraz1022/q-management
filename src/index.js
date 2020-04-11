@@ -24,11 +24,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
+        <Route path="/dashboard/:id" component={Dashboard} />
+        <Route path="/registration/:id" component={Registration} />
+        <Route path="/form/:id/:name" component={InviteForm} />
+        <Route path="/status/:id/:userkey" component={UserStatus} />
         <Route exact path="/" component={NoProcessingCard} />
-        <Route exact path="/dashboard/:id" component={Dashboard} />
-        <Route exact path="/registration/:id" component={Registration} />
-        <Route exact path="/form/:id/:name" component={InviteForm} />
-        <Route exact path="/status/:id/:userkey" component={UserStatus} />
 
       </Switch>
     </Router>
