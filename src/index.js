@@ -28,7 +28,7 @@ ReactDOM.render(
         <Route path="/registration/:id" component={Registration} />
         <Route path="/form/:id/:name" component={InviteForm} />
         <Route path="/status/:id/:userkey" component={UserStatus} />
-        <Route exact path="/" component={NoProcessingCard} />
+        <Route path="/" exact component={NoProcessingCard} />
 
       </div>
     </Router>
