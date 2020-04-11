@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import firebase from 'firebase/';
 import database from './utils/FirebaseDB.js';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link,

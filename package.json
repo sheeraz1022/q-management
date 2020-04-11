@@ -13,6 +13,7 @@
     "firebase-admin": "^8.10.0",
     "material-ui-icons": "^1.0.0-beta.36",
     "moment": "^2.24.0",
+    "netlify-cli": "^2.43.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
