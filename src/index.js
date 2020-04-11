@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import firebase from 'firebase/';
 import database from './utils/FirebaseDB.js';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link,
@@ -23,14 +23,14 @@ import NoProcessingCard from './components/NoProcessingCard';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Switch>
+      <div>
         <Route path="/dashboard/:id" component={Dashboard} />
         <Route path="/registration/:id" component={Registration} />
         <Route path="/form/:id/:name" component={InviteForm} />
         <Route path="/status/:id/:userkey" component={UserStatus} />
         <Route exact path="/" component={NoProcessingCard} />
 
-      </Switch>
+      </div>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
