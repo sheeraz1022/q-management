@@ -42,7 +42,7 @@ export default function UserStatus(props) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    database
+    const onValueChange = database
       .ref("/test/" + props.match.params.id)
       .orderByKey()
       .endAt(props.match.params.userkey)
@@ -52,7 +52,7 @@ export default function UserStatus(props) {
           const { status, name } = child.val();
 
           if (status === "WAITING") {
-            console.log(name);
+            // console.log(name);
             index++;
           }
 
@@ -65,6 +65,12 @@ export default function UserStatus(props) {
         setWaitingLength(index);
         //console.log('RETURNED', index);
       });
+
+    return () => {
+      database
+        .ref("/test/" + props.match.params.id)
+        .off("value", onValueChange);
+    };
   });
 
   return (
